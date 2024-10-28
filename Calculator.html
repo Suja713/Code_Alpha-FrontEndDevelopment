@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <<style>
+    h1{
+  text-align: center;
+ 
+
+}
+.container{
+  width: 360px;
+  height: 460px;
+  background-color: #888A92;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+p{
+   margin-left: 10px;
+  color: #E7A7A7;
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+#screen{
+  background-color: #5A6359;
+  width: 340px;
+  height: 80px;
+  margin: 5px;
+  font-size: 4rem;
+  text-align: right;
+  border-radius: 10px;
+  
+  
+  
+}
+.button {
+  background-color: #9D5233;
+  color: #F6E7E7;
+  width: 66px;
+  height: 50px;
+  font-size: 2.5rem;
+  margin: 10px;
+  border-radius: 8px;
+  
+}
+.clear{
+  background-color: #81D24D;
+}
+.operator{
+  background-color: #7D665B;
+}
+.button:hover{
+  border: 3px solid#6AB885;
+}
+  </style>
+  <title>calculator</title>
+  
+</head>
+
+<body>
+<h1>CALCULATOR</h1>
+<div class="container">
+  <form action="">
+    <p>CASIO</p>
+    <input type="text" id="screen">
+    <br>
+    <input class="button number"type="button" value="7" onclick="btnclick(value)">
+    <input class="button number"type="button" value="8" onclick="btnclick(value)">
+   <input class="button number"type="button" value="9" onclick="btnclick(value)">
+    <input class="button operator"type="button" value="/" onclick="btnclick(value)">
+    <br>
+    
+
+
+    <input class="button number"type="button" value="4" onclick="btnclick(value)">
+    <input class="button number"type="button" value="5" onclick="btnclick(value)">
+   <input class="button number"type="button" value="6" onclick="btnclick(value)">
+    <input class="button operator"type="button" value="*" onclick="btnclick(value)">
+    <br>
+            <input class="button number"type="button" value="1" onclick="btnclick(value)">
+    <input class="button number"type="button" value="2" onclick="btnclick(value)">
+   <input class="button result"type="button" value="3" onclick="btnclick(value)">
+    <input class="button operator"type="button" value="+" onclick="btnclick(value)">
+    <br>
+
+        <input class="button clear"type="button" value="c" onclick="clearscreen()">
+    <input class="button number"type="button" value="0" onclick="btnclick(value)">
+   <input class="button result"type="button" value="=" onclick="findresult()">
+    <input class="button operator"type="button" value="-" onclick="btnclick(value)">
+    <br>
+  
+  
+    
+    
+
+  </form>
+</div>
+<script>
+  var screen=document.getElementById("screen");
+function btnclick(value){
+  screen.value+=value;
+}
+function clearscreen(){
+  screen.value="";
+  
+}
+  
+function findresult(){
+  var result=eval(screen.value)
+  screen.value=result;
+}
+</script>
+
+</body>
+
+</html>
